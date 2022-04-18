@@ -6,16 +6,15 @@
 def cyclicRotation(A, K):
     if A:
         if K <= len(A):
-            if K == 0 or K ==len(A):
+            if K == 0 or K == len(A):
                 return A
             else:
                 return A[len(A)-K:] + A[:len(A)-K]
         else:
-            if len(A)==2 and K%2 ==0:
+            if len(A) == 2 and K % 2 == 0:
                 return A
             else:
                 i = K % len(A)
                 return A[len(A)-i:] + A[:len(A)-i]
     else:
         return A
-
